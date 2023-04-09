@@ -13,9 +13,7 @@ export const POST = async ({ request }) => {
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
       messages: [
-        //{ "role": "user", "content": `tweet: ${message}` },
-        //{ "role": "assistant", "content": '"A educação é a chave para um futuro melhor. Invista em conhecimento e transforme sua vida e a sociedade ao seu redor. #educação #transformação #futuro"' },
-        { "role": "user", "content": `improve: ${message}` },
+        { "role": "user", "content": `tweet: ${message}` },
       ],
       temperature: 0
     })
