@@ -3,6 +3,6 @@
   import "virtual:uno.css";
 </script>
 
-<main class="bg-red-100">
+<div class="bg-slate-800 min-h-screen grid content-center">
   <slot />
-</main>
+</div>
