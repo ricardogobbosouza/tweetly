@@ -1,10 +1,12 @@
 <script lang="ts">
+  import logo from "$lib/assets/logo.png";
+
   let message: string;
   let content: string | undefined = undefined;
   let loading: boolean = false;
 
   const generate = async () => {
-    if (loading) return;
+    if (loading || !message) return;
     loading = true;
     content = undefined;
     const response = await fetch("/api/posts", {
@@ -26,8 +28,8 @@
 </svelte:head>
 
 <main class="container mx-auto max-w-md p-6 space-y-4">
-  <h1 class="text-white font-extrabold text-4xl tracking-tight text-center">
-    Tweetly
+  <h1>
+    <img alt="Tweetly" src={logo} class="mx-auto" />
   </h1>
   <p class="text-xl text-slate-400 text-center">
     Having trouble creating your Tweets? <br />
