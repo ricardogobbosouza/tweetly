@@ -1,5 +1,13 @@
 {
 	"name": "tweetly",
+  "description": "Tweet maker using OpenAI",
+  "repository": "ricardogobbosouza/tweetly",
+  "homepage": "https://tweetly.vercel.app",
+  "author": {
+    "name": "Ricardo Gobbo de Souza",
+    "email": "ricardogobbosouza@yahoo.com.br"
+  },
+  "sideEffects": false,
   "type": "module",
 	"scripts": {
 		"dev": "vite dev",
