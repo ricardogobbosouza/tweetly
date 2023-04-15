@@ -45,8 +45,9 @@
     />
     {#if !loading}
       <button
+        disabled={!message}
         type="submit"
-        class="w-full py-2 px-3 text-white bg-sky-600 hover:bg-sky-700 transition rounded"
+        class="w-full py-2 px-3 text-white bg-sky-600 hover:bg-sky-700 transition rounded !disabled:bg-gray-500 !disabled:text-gray-700"
       >
         Generate tweet
       </button>
@@ -61,7 +62,7 @@
   </form>
 
   {#if content}
-    <div class="bg-gray-50 rounded p-2 text-sm tracking-tight font-light">
+    <div class="bg-gray-50 rounded p-2 tracking-tight font-light">
       {content}
       <div class="flex justify-end">
         <button
